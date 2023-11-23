@@ -30,3 +30,10 @@ Cypress.Commands.add("login", (login, password) => {
   cy.get("#pass").type(password);
   cy.contains("Submit").click();
 });
+Cypress.Commands.add("addBook", (book) => {
+    cy.contains('Add new').click();
+    cy.get('#title').type('Азбука');
+    cy.get('#description').type('Школьное пособие');
+    cy.get('#authors').type('Лев Толстой');
+    cy.contains('Submit').click();
+});

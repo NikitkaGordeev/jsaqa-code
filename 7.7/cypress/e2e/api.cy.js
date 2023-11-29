@@ -1,5 +1,3 @@
-import users from "../fixtures/users.json";
-
 describe("api tests", () => {
   it('create user1', () => {
     cy.request({

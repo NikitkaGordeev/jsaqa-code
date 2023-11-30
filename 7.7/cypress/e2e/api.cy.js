@@ -26,7 +26,7 @@ describe("api tests", () => {
   it('update user1', () => {
     cy.request({
       method: 'PUT',
-      url: '/v2/user/name1}',
+      url: '/v2/user/name1',
       body: {
         "id": 1,
         "username": "name1",

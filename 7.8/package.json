@@ -1,0 +1,28 @@
+{
+  "name": "jsaqa-live-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:api:chrome":"cypress run --record --group api:chrome --spec \"cypress/e2e/api.cy.js\" --browser chrome",
+    "test:ui:chrome": "cypress run --record --group ui:chrome --spec \"cypress/e2e/spec.cy.js\" --browser chrome",
+    "test:parallel:chrome": "run-p -c test:api:chrome test:ui:chrome",
+    "test:api:electron":"cypress run --record --group api:electron --spec \"cypress/e2e/api.cy.js\" --browser electron",
+    "test:ui:electron": "cypress run --record --group ui:electron --spec \"cypress/e2e/spec.cy.js\" --browser electron",
+    "test:parallel:electron": "run-p -c test:api:electron test:ui:electron",
+    "test:api:msedge":"cypress run --record --group api:msedge --spec \"cypress/e2e/api.cy.js\" --browser \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
+    "test:ui:msedge": "cypress run --record --group ui:msedge --spec \"cypress/e2e/spec.cy.js\" --browser \"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\"",
+    "test:parallel:msedge": "run-p -c test:api:msedge test:ui:msedge",
+    "test:parallel:all": "run-p -c test:parallel:chrome test:parallel:electron test:parallel:msedge",
+
+    "test:flowE2e:chrome": "cypress run --record --group e2e:chrome --spec \"cypress/e2e/spec.cy.js\" --browser chrome",
+    "test:flowNewE2E:electron": "cypress run --record --group e2e:chrome --spec \"cypress/newE2E/spec.cy.js\" --browser electron",
+    "test:parallelF:all": "run-p -c test:flowE2e:chrome test:flowNewE2E:electron"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

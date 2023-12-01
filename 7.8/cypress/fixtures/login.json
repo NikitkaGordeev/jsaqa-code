@@ -1,0 +1,9 @@
+[
+    { "invalidName": "sad",
+      "invalidEmail": "qamid@qamid.ru",
+      "invalidPassword": "middle",
+      "validName": "happy",
+      "validEmail": "qamid@qamid.ru",
+      "validPassword": "qamid"
+ }    
+   ]

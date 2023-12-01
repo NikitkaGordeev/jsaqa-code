@@ -1,0 +1,10 @@
+{
+    "dayWeek": ".page-nav__day",
+    "email": "E-mail",
+    "pass": "Пароль",
+    "logButt": ".login__button",
+    "dayWeek3": ".page-nav > :nth-child(3)",
+    "button": ".acceptin-button",
+    "admFilmText": "[data-film-id='118'] > .conf-step__movie-title",
+    "mainFilmText": ":nth-child(1) > .movie__info > .movie__description > .movie__title"
+}

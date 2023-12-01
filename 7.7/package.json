@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:api":"npx cypress run --record --group api --key 9efd30df-2252-4686-8a2a-b2db306723d6 --spec \"cypress/e2e/api.cy.js\" --ci-build-id 16",
+    "test:ui": "npx cypress run --record --group ui --key 9efd30df-2252-4686-8a2a-b2db306723d6 --spec \"cypress/e2e/spec.cy.js\" --ci-build-id 16",
+    "test:parallel": "run-p -c test:api test:ui"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.0",
+    "npm-run-all": "^4.1.5"
   }
 }

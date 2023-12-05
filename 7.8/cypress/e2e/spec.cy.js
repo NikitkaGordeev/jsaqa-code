@@ -20,14 +20,14 @@ describe('movie tickets reservations screen', () => {
 
   login.forEach((data) => {
     it(`Should check admin valid authorization ${data.validName}`, () => {
-      cy.visit('/admin/');
+      cy.visit('/admin');
       cy.contains(sel.email).type(data.validEmail);
       cy.contains(sel.pass).type(data.validPassword);
       cy.get(sel.logButt).click();
       cy.contains("Управление залами").should("be.visible");
       cy.get(sel.admFilmText).then(($el) => $el.textContent).should('have.text', 'Зверополис');
       cy.get(sel.admFilmText).invoke('text').then((text) => {
-        cy.visit("/client/");
+        cy.visit("/client");
         cy.get(sel.dayWeek).should('have.length', 7);
         cy.get(sel.dayWeek3).click();
         cy.get(sel.mainFilmText).should('have.text', text);

@@ -1,5 +1,5 @@
-import login from "..//fixtures/login.json";
-import sel from "..//fixtures/sel.json";
+import login from "../../fixtures/login.json";
+import sel from "../../fixtures/sel.json";
 
 describe('movie tickets reservations screen', () => {
 
